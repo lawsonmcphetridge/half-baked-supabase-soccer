@@ -78,7 +78,6 @@ function displayCurrentGameEl() {
 async function displayAllGames() {
     currentGameEl.textContent = '';
     const currentGame = await getGames();
-
     for (let game of currentGame) {
         const pastGames = renderGame(game);
         pastGamesEl.append(pastGames);
