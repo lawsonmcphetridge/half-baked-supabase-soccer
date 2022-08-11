@@ -59,11 +59,12 @@ finishGameButton.addEventListener('click', async () => {
     await createGame(currentGame);
     pastGamesEl.textContent = '';
     displayCurrentGameEl();
-    displayAllGames();
+    await displayAllGames();
 });
 
-window.addEventListener('', async () => {
-    displayAllGames();
+window.addEventListener('load', async () => {
+    await displayAllGames();
+    displayCurrentGameEl();
 });
 
 function displayCurrentGameEl() {
@@ -83,5 +84,3 @@ async function displayAllGames() {
         pastGamesEl.append(pastGames);
     }
 }
-displayAllGames();
-displayCurrentGameEl();
