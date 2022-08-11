@@ -56,10 +56,15 @@ finishGameButton.addEventListener('click', async () => {
         score2: score2,
     };
     
-    await createGame(currentGame);
     pastGamesEl.textContent = '';
+    await createGame(currentGame);
+    name1 = '';
+    name2 = '';
+    score1 = 0;
+    score2 = 0;
     displayCurrentGameEl();
     await displayAllGames();
+    displayCurrentGameEl();
 });
 
 window.addEventListener('load', async () => {
